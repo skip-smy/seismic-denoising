@@ -1,0 +1,43 @@
+﻿# Large data / results (keep out of GitHub)
+鏁版嵁/
+缁撴灉/
+**/real_results/
+**/result/
+**/real_result/
+**/results/
+
+# Binary scientific data
+*.npy
+*.npz
+*.segy
+*.sgy
+*.h5
+*.hdf5
+*.mat
+*.bin
+
+# Large checkpoints (GitHub soft limit 50MB / hard 100MB)
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.pkl
+*.pickle
+
+# Python / IDE
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local helper scripts
+_setup_check.ps1
+_project_root.txt
+_gh_setup.ps1

@@ -1,0 +1,16 @@
+====================2026-03-30 16:29:07
+0-1区间归一化noisy文件: data/real_noisy.npy
+clean文件: data/clean.npy
+sigma: 0.05
+总耗时: 392.9937 秒
+patch_size: 35
+stride: 10
+batch_size: 128
+初始PSNR: 21.96 dB
+====================去噪PSNR: 23.29 dB
+初始SNR: 1.31 dB
+去噪SNR: 2.64 dB
+初始SSIM: 0.5774
+去噪SSIM: 0.6462
+初始RMSE: 0.159645
+去噪RMSE: 0.136960

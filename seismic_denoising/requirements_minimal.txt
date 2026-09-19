@@ -1,0 +1,14 @@
+numpy
+scipy
+torch
+torchvision
+segyio
+bm3d
+bm4d
+matplotlib
+opencv-python
+scikit-image
+scikit-learn
+prettytable
+tqdm
+pandas

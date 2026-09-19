@@ -1,0 +1,76 @@
+{
+  "task": "seismic_finetune_sigma0p05_fast",
+  "gpu_ids": [
+    0
+  ],
+  "path": {
+    "root": "debug/seismic_finetune",
+    "pretrained_netG": "release/denoising/dcdicl_nb4_stage4_gray/models/"
+  },
+  "data": {
+    "type": "denoising",
+    "n_channels": 1,
+    "train": {
+      "segy_path": "seismic_data/train.segy",
+      "sigma": [
+        0.05,
+        0.05
+      ],
+      "sigma_mode": "minus_one_one",
+      "norm_mode": "percentile",
+      "p_low": 1.0,
+      "p_high": 99.0,
+      "H_size": 64,
+      "num_patches_per_epoch": 300,
+      "num_workers": 2,
+      "batch_size": 1
+    },
+    "test": {
+      "segy_path": "seismic_data/val.segy",
+      "sigma": [
+        0.05,
+        0.05
+      ],
+      "sigma_mode": "minus_one_one",
+      "norm_mode": "percentile",
+      "H_size": 64,
+      "stride": 512,
+      "max_val_patches": 30,
+      "num_workers": 1,
+      "batch_size": 1,
+      "seed": 0
+    }
+  },
+  "netG": {
+    "d_size": 5,
+    "fix_d": false,
+    "n_iter": 4,
+    "in_nc": 1,
+    "nc_x": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "nb": 4
+  },
+  "train": {
+    "manual_seed": 0,
+    "reload_broadcast": false,
+    "load_strict": true,
+    "G_optimizer_lr": 1e-5,
+    "G_scheduler_milestones": [
+      100,
+      200
+    ],
+    "G_scheduler_gamma": 0.5,
+    "total_iters": 300,
+    "checkpoint_test": 50,
+    "checkpoint_savemodel": 150,
+    "checkpoint_log": 10,
+    "checkpoint_saveimage": 150
+  },
+  "test": {
+    "visualize": false
+  }
+}
