@@ -12,10 +12,6 @@ Code and configs for seismic denoising experiments (DCDicL + baselines: DnCNN / 
 - `图片/` — paper figures (optional)
 - `sample_data/` — ~1MB clean/noisy patches for smoke tests
 
-## Not in this repo
-
-Full datasets (`.segy` / large `.npy`), result tensors, and model weights are **not** uploaded (GitHub size limits).
-See `seismic_denoising/WHAT_TO_DOWNLOAD.md` and `DATA_MANIFEST.md` for how to obtain them.
 
 ## Quick start
 
